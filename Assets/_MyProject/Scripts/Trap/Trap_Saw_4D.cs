@@ -74,4 +74,11 @@ public class Trap_Saw_4D : MonoBehaviour
         }
         transform.position = Vector2.MoveTowards(transform.position, target, speed*Time.deltaTime);
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == "Player")
+        {
+            collision.GetComponent<Player_Health>().TakeDamage(damage);
+        }
+    }
 }
