@@ -78,7 +78,7 @@ public class Trap_Saw_4D : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
-            collision.GetComponent<Player_Health>().TakeDamage(damage);
+            collision.GetComponent<Player_Health>().TakeDamage(1);
         }
     }
 }
